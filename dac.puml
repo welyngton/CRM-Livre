@@ -1,0 +1,448 @@
+@startuml
+annotation java.lang.Override
+annotation javax.jws.WebService
+annotation javax.persistence.Column
+annotation javax.persistence.Entity
+annotation javax.persistence.GeneratedValue
+annotation javax.persistence.Id
+annotation javax.persistence.Table
+class action.AnotacaoServlet
+class action.AtividadeServlet
+class action.CampanhaServlet
+class action.ContaServlet
+class action.DACControllerServlet
+class action.LoginFilter
+class action.LoginServlet
+class action.OportunidadeServlet
+class action.TarefaServlet
+class action.UsuarioServlet
+class action.VendaServlet
+class action.WeatherWSDL
+class bean.Anotacao
+class bean.Atividade
+class bean.Campanha
+class bean.Conta
+class bean.Oportunidade
+class bean.Tarefa
+class bean.Usuario
+class bean.Venda
+class dao.AnotacaoDao
+class dao.AtividadeDao
+class dao.CampanhaDao
+class dao.ConnectionFactory
+class dao.ContaDao
+class dao.HibernateUtil
+class dao.LoginDao
+class dao.OportunidadeDao
+class dao.TarefaDao
+class dao.UsuarioDao
+class dao.VendaDao
+class java.io.File
+class java.io.IOException
+class java.io.OutputStream
+class java.io.PrintWriter
+class java.io.StringReader
+class java.net.URL
+class java.sql.Connection
+class java.sql.DriverManager
+class java.sql.SQLException
+class java.text.DateFormat
+class java.text.ParseException
+class java.text.SimpleDateFormat
+class java.util.ArrayList
+class java.util.Date
+class java.util.HashMap
+class java.util.List
+class java.util.Locale
+class java.util.StringTokenizer
+class java.util.logging.Level
+class java.util.logging.Logger
+class javax.persistence.EntityManager
+class javax.persistence.EntityManagerFactory
+class javax.persistence.GenerationType
+class javax.persistence.ManyToOne
+class javax.persistence.Persistence
+class javax.servlet.FilterChain
+class javax.servlet.FilterConfig
+class javax.servlet.RequestDispatcher
+class javax.servlet.ServletConfig
+class javax.servlet.ServletException
+class javax.servlet.ServletRequest
+class javax.servlet.ServletResponse
+class javax.servlet.http.Cookie
+class javax.servlet.http.HttpServlet
+class javax.servlet.http.HttpServletRequest
+class javax.servlet.http.HttpServletResponse
+class javax.servlet.http.HttpSession
+class javax.xml.bind.JAXBContext
+class javax.xml.parsers.DocumentBuilder
+class javax.xml.parsers.DocumentBuilderFactory
+class javax.xml.parsers.ParserConfigurationException
+class net.sf.jasperreports.engine.JRException
+class net.sf.jasperreports.engine.JasperRunManager
+class org.hibernate.Query
+class org.hibernate.Session
+class org.hibernate.SessionFactory
+class org.hibernate.Transaction
+class org.hibernate.cfg.AnnotationConfiguration
+class org.hibernate.cfg.Configuration
+class org.w3c.dom.CharacterData
+class org.w3c.dom.Document
+class org.w3c.dom.Element
+class org.w3c.dom.Node
+class org.w3c.dom.NodeList
+class org.xml.sax.InputSource
+class org.xml.sax.SAXException
+interface java.io.Serializable
+interface javax.servlet.Filter
+action.AnotacaoServlet ..> java.lang.Override
+action.AnotacaoServlet ..> bean.Anotacao
+action.AnotacaoServlet ..> dao.AnotacaoDao
+action.AnotacaoServlet ..> java.io.IOException
+action.AnotacaoServlet ..> java.sql.SQLException
+action.AnotacaoServlet ..> java.text.DateFormat
+action.AnotacaoServlet ..> java.text.SimpleDateFormat
+action.AnotacaoServlet ..> java.util.Date
+action.AnotacaoServlet ..> java.util.List
+action.AnotacaoServlet ..> java.util.logging.Level
+action.AnotacaoServlet ..> java.util.logging.Logger
+action.AnotacaoServlet ..> javax.servlet.RequestDispatcher
+action.AnotacaoServlet ..> javax.servlet.ServletException
+action.AnotacaoServlet --|> javax.servlet.http.HttpServlet
+action.AnotacaoServlet ..> javax.servlet.http.HttpServletRequest
+action.AnotacaoServlet ..> javax.servlet.http.HttpServletResponse
+action.AtividadeServlet ..> java.lang.Override
+action.AtividadeServlet ..> bean.Atividade
+action.AtividadeServlet ..> bean.Usuario
+action.AtividadeServlet ..> dao.AtividadeDao
+action.AtividadeServlet ..> dao.UsuarioDao
+action.AtividadeServlet ..> java.io.IOException
+action.AtividadeServlet ..> java.sql.SQLException
+action.AtividadeServlet ..> java.text.DateFormat
+action.AtividadeServlet ..> java.text.SimpleDateFormat
+action.AtividadeServlet ..> java.util.Date
+action.AtividadeServlet ..> java.util.List
+action.AtividadeServlet ..> java.util.logging.Level
+action.AtividadeServlet ..> java.util.logging.Logger
+action.AtividadeServlet ..> javax.servlet.RequestDispatcher
+action.AtividadeServlet ..> javax.servlet.ServletException
+action.AtividadeServlet --|> javax.servlet.http.HttpServlet
+action.AtividadeServlet ..> javax.servlet.http.HttpServletRequest
+action.AtividadeServlet ..> javax.servlet.http.HttpServletResponse
+action.CampanhaServlet ..> java.lang.Override
+action.CampanhaServlet ..> bean.Campanha
+action.CampanhaServlet ..> dao.CampanhaDao
+action.CampanhaServlet ..> java.io.IOException
+action.CampanhaServlet ..> java.sql.SQLException
+action.CampanhaServlet ..> java.text.DateFormat
+action.CampanhaServlet ..> java.text.SimpleDateFormat
+action.CampanhaServlet ..> java.util.Date
+action.CampanhaServlet ..> java.util.List
+action.CampanhaServlet ..> java.util.logging.Level
+action.CampanhaServlet ..> java.util.logging.Logger
+action.CampanhaServlet ..> javax.servlet.RequestDispatcher
+action.CampanhaServlet ..> javax.servlet.ServletException
+action.CampanhaServlet --|> javax.servlet.http.HttpServlet
+action.CampanhaServlet ..> javax.servlet.http.HttpServletRequest
+action.CampanhaServlet ..> javax.servlet.http.HttpServletResponse
+action.ContaServlet ..> java.lang.Override
+action.ContaServlet ..> bean.Conta
+action.ContaServlet ..> dao.ContaDao
+action.ContaServlet ..> java.io.IOException
+action.ContaServlet ..> java.io.PrintWriter
+action.ContaServlet ..> java.sql.SQLException
+action.ContaServlet ..> java.text.DateFormat
+action.ContaServlet ..> java.text.ParseException
+action.ContaServlet ..> java.text.SimpleDateFormat
+action.ContaServlet ..> java.util.ArrayList
+action.ContaServlet ..> java.util.Date
+action.ContaServlet ..> java.util.List
+action.ContaServlet ..> java.util.logging.Level
+action.ContaServlet ..> java.util.logging.Logger
+action.ContaServlet ..> javax.servlet.RequestDispatcher
+action.ContaServlet ..> javax.servlet.ServletException
+action.ContaServlet --|> javax.servlet.http.HttpServlet
+action.ContaServlet ..> javax.servlet.http.HttpServletRequest
+action.ContaServlet ..> javax.servlet.http.HttpServletResponse
+action.DACControllerServlet ..> java.lang.Override
+action.DACControllerServlet ..> dao.AtividadeDao
+action.DACControllerServlet ..> dao.CampanhaDao
+action.DACControllerServlet ..> dao.ContaDao
+action.DACControllerServlet ..> dao.OportunidadeDao
+action.DACControllerServlet ..> dao.VendaDao
+action.DACControllerServlet ..> java.io.IOException
+action.DACControllerServlet ..> java.io.OutputStream
+action.DACControllerServlet ..> java.io.StringReader
+action.DACControllerServlet ..> java.net.URL
+action.DACControllerServlet ..> java.sql.Connection
+action.DACControllerServlet ..> java.sql.DriverManager
+action.DACControllerServlet ..> java.sql.SQLException
+action.DACControllerServlet ..> java.util.HashMap
+action.DACControllerServlet ..> java.util.List
+action.DACControllerServlet ..> java.util.logging.Level
+action.DACControllerServlet ..> java.util.logging.Logger
+action.DACControllerServlet ..> javax.servlet.RequestDispatcher
+action.DACControllerServlet ..> javax.servlet.ServletException
+action.DACControllerServlet --|> javax.servlet.http.HttpServlet
+action.DACControllerServlet ..> javax.servlet.http.HttpServletRequest
+action.DACControllerServlet ..> javax.servlet.http.HttpServletResponse
+action.DACControllerServlet ..> javax.xml.parsers.DocumentBuilder
+action.DACControllerServlet ..> javax.xml.parsers.DocumentBuilderFactory
+action.DACControllerServlet ..> javax.xml.parsers.ParserConfigurationException
+action.DACControllerServlet ..> net.sf.jasperreports.engine.JRException
+action.DACControllerServlet ..> net.sf.jasperreports.engine.JasperRunManager
+action.DACControllerServlet ..> org.w3c.dom.CharacterData
+action.DACControllerServlet ..> org.w3c.dom.Document
+action.DACControllerServlet ..> org.w3c.dom.Element
+action.DACControllerServlet ..> org.w3c.dom.Node
+action.DACControllerServlet ..> org.w3c.dom.NodeList
+action.DACControllerServlet ..> org.xml.sax.InputSource
+action.DACControllerServlet ..> org.xml.sax.SAXException
+action.LoginFilter ..> java.lang.Override
+action.LoginFilter ..> dao.LoginDao
+action.LoginFilter ..> java.io.File
+action.LoginFilter ..> java.io.IOException
+action.LoginFilter ..> java.io.PrintWriter
+action.LoginFilter ..> java.io.StringReader
+action.LoginFilter ..> java.util.ArrayList
+action.LoginFilter ..> java.util.List
+action.LoginFilter ..> java.util.StringTokenizer
+action.LoginFilter ..> java.util.logging.Level
+action.LoginFilter ..> java.util.logging.Logger
+action.LoginFilter ..> javax.servlet.FilterChain
+action.LoginFilter ..> javax.servlet.FilterConfig
+action.LoginFilter ..> javax.servlet.RequestDispatcher
+action.LoginFilter ..> javax.servlet.ServletException
+action.LoginFilter ..> javax.servlet.ServletRequest
+action.LoginFilter ..> javax.servlet.ServletResponse
+action.LoginFilter ..> javax.servlet.http.Cookie
+action.LoginFilter ..> javax.servlet.http.HttpServlet
+action.LoginFilter ..> javax.servlet.http.HttpServletRequest
+action.LoginFilter ..> javax.servlet.http.HttpServletResponse
+action.LoginFilter ..> javax.xml.bind.JAXBContext
+action.LoginFilter ..> javax.xml.parsers.DocumentBuilder
+action.LoginFilter ..> javax.xml.parsers.DocumentBuilderFactory
+action.LoginFilter ..> javax.xml.parsers.ParserConfigurationException
+action.LoginFilter ..> org.w3c.dom.CharacterData
+action.LoginFilter ..> org.w3c.dom.Document
+action.LoginFilter ..> org.w3c.dom.Element
+action.LoginFilter ..> org.w3c.dom.Node
+action.LoginFilter ..> org.w3c.dom.NodeList
+action.LoginFilter ..> org.xml.sax.InputSource
+action.LoginFilter ..> org.xml.sax.SAXException
+action.LoginFilter --|> javax.servlet.Filter
+action.LoginServlet ..> java.lang.Override
+action.LoginServlet ..> bean.Usuario
+action.LoginServlet ..> dao.LoginDao
+action.LoginServlet ..> java.io.IOException
+action.LoginServlet ..> java.io.StringReader
+action.LoginServlet ..> java.util.logging.Level
+action.LoginServlet ..> java.util.logging.Logger
+action.LoginServlet ..> javax.servlet.RequestDispatcher
+action.LoginServlet ..> javax.servlet.ServletException
+action.LoginServlet ..> javax.servlet.http.Cookie
+action.LoginServlet --|> javax.servlet.http.HttpServlet
+action.LoginServlet ..> javax.servlet.http.HttpServletRequest
+action.LoginServlet ..> javax.servlet.http.HttpServletResponse
+action.LoginServlet ..> javax.servlet.http.HttpSession
+action.LoginServlet ..> javax.xml.parsers.DocumentBuilder
+action.LoginServlet ..> javax.xml.parsers.DocumentBuilderFactory
+action.LoginServlet ..> javax.xml.parsers.ParserConfigurationException
+action.LoginServlet ..> org.w3c.dom.CharacterData
+action.LoginServlet ..> org.w3c.dom.Document
+action.LoginServlet ..> org.w3c.dom.Element
+action.LoginServlet ..> org.w3c.dom.Node
+action.LoginServlet ..> org.w3c.dom.NodeList
+action.LoginServlet ..> org.xml.sax.InputSource
+action.LoginServlet ..> org.xml.sax.SAXException
+action.OportunidadeServlet ..> java.lang.Override
+action.OportunidadeServlet ..> bean.Oportunidade
+action.OportunidadeServlet ..> dao.OportunidadeDao
+action.OportunidadeServlet ..> java.io.IOException
+action.OportunidadeServlet ..> java.io.PrintWriter
+action.OportunidadeServlet ..> java.sql.SQLException
+action.OportunidadeServlet ..> java.text.DateFormat
+action.OportunidadeServlet ..> java.text.SimpleDateFormat
+action.OportunidadeServlet ..> java.util.Date
+action.OportunidadeServlet ..> java.util.List
+action.OportunidadeServlet ..> java.util.logging.Level
+action.OportunidadeServlet ..> java.util.logging.Logger
+action.OportunidadeServlet ..> javax.servlet.RequestDispatcher
+action.OportunidadeServlet ..> javax.servlet.ServletException
+action.OportunidadeServlet --|> javax.servlet.http.HttpServlet
+action.OportunidadeServlet ..> javax.servlet.http.HttpServletRequest
+action.OportunidadeServlet ..> javax.servlet.http.HttpServletResponse
+action.TarefaServlet ..> java.lang.Override
+action.TarefaServlet ..> bean.Tarefa
+action.TarefaServlet ..> dao.TarefaDao
+action.TarefaServlet ..> java.io.IOException
+action.TarefaServlet ..> java.io.PrintWriter
+action.TarefaServlet ..> java.sql.SQLException
+action.TarefaServlet ..> java.text.DateFormat
+action.TarefaServlet ..> java.text.ParseException
+action.TarefaServlet ..> java.text.SimpleDateFormat
+action.TarefaServlet ..> java.util.ArrayList
+action.TarefaServlet ..> java.util.Date
+action.TarefaServlet ..> java.util.List
+action.TarefaServlet ..> java.util.logging.Level
+action.TarefaServlet ..> java.util.logging.Logger
+action.TarefaServlet ..> javax.servlet.RequestDispatcher
+action.TarefaServlet ..> javax.servlet.ServletConfig
+action.TarefaServlet ..> javax.servlet.ServletException
+action.TarefaServlet --|> javax.servlet.http.HttpServlet
+action.TarefaServlet ..> javax.servlet.http.HttpServletRequest
+action.TarefaServlet ..> javax.servlet.http.HttpServletResponse
+action.TarefaServlet ..> javax.servlet.http.HttpSession
+action.UsuarioServlet ..> java.lang.Override
+action.UsuarioServlet ..> bean.Anotacao
+action.UsuarioServlet ..> dao.AnotacaoDao
+action.UsuarioServlet ..> java.io.IOException
+action.UsuarioServlet ..> java.sql.SQLException
+action.UsuarioServlet ..> java.util.List
+action.UsuarioServlet ..> java.util.logging.Level
+action.UsuarioServlet ..> java.util.logging.Logger
+action.UsuarioServlet ..> javax.servlet.RequestDispatcher
+action.UsuarioServlet ..> javax.servlet.ServletException
+action.UsuarioServlet --|> javax.servlet.http.HttpServlet
+action.UsuarioServlet ..> javax.servlet.http.HttpServletRequest
+action.UsuarioServlet ..> javax.servlet.http.HttpServletResponse
+action.VendaServlet ..> java.lang.Override
+action.VendaServlet ..> bean.Venda
+action.VendaServlet ..> dao.VendaDao
+action.VendaServlet ..> java.io.IOException
+action.VendaServlet ..> java.sql.SQLException
+action.VendaServlet ..> java.util.List
+action.VendaServlet ..> java.util.logging.Level
+action.VendaServlet ..> java.util.logging.Logger
+action.VendaServlet ..> javax.servlet.RequestDispatcher
+action.VendaServlet ..> javax.servlet.ServletException
+action.VendaServlet --|> javax.servlet.http.HttpServlet
+action.VendaServlet ..> javax.servlet.http.HttpServletRequest
+action.VendaServlet ..> javax.servlet.http.HttpServletResponse
+action.WeatherWSDL ..> javax.jws.WebService
+bean.Anotacao ..> java.lang.Override
+bean.Anotacao ..> javax.persistence.Column
+bean.Anotacao ..> javax.persistence.Entity
+bean.Anotacao ..> javax.persistence.GeneratedValue
+bean.Anotacao ..> javax.persistence.Id
+bean.Anotacao ..> javax.persistence.Table
+bean.Anotacao ..> java.text.ParseException
+bean.Anotacao ..> javax.persistence.GenerationType
+bean.Anotacao --|> java.io.Serializable
+bean.Atividade ..> java.lang.Override
+bean.Atividade ..> javax.persistence.Column
+bean.Atividade ..> javax.persistence.Entity
+bean.Atividade ..> javax.persistence.GeneratedValue
+bean.Atividade ..> javax.persistence.Id
+bean.Atividade ..> javax.persistence.Table
+bean.Atividade ..> java.text.ParseException
+bean.Atividade ..> javax.persistence.GenerationType
+bean.Atividade ..> javax.persistence.ManyToOne
+bean.Atividade --|> java.io.Serializable
+bean.Campanha ..> java.lang.Override
+bean.Campanha ..> javax.persistence.Column
+bean.Campanha ..> javax.persistence.Entity
+bean.Campanha ..> javax.persistence.GeneratedValue
+bean.Campanha ..> javax.persistence.Id
+bean.Campanha ..> javax.persistence.Table
+bean.Campanha ..> java.text.ParseException
+bean.Campanha ..> javax.persistence.GenerationType
+bean.Campanha --|> java.io.Serializable
+bean.Conta ..> java.lang.Override
+bean.Conta ..> javax.persistence.Column
+bean.Conta ..> javax.persistence.Entity
+bean.Conta ..> javax.persistence.GeneratedValue
+bean.Conta ..> javax.persistence.Id
+bean.Conta ..> javax.persistence.Table
+bean.Conta ..> java.text.DateFormat
+bean.Conta ..> java.text.ParseException
+bean.Conta ..> java.text.SimpleDateFormat
+bean.Conta ..> java.util.Date
+bean.Conta ..> java.util.Locale
+bean.Conta ..> javax.persistence.GenerationType
+bean.Conta --|> java.io.Serializable
+bean.Oportunidade ..> java.lang.Override
+bean.Oportunidade ..> javax.persistence.Column
+bean.Oportunidade ..> javax.persistence.Entity
+bean.Oportunidade ..> javax.persistence.GeneratedValue
+bean.Oportunidade ..> javax.persistence.Id
+bean.Oportunidade ..> javax.persistence.Table
+bean.Oportunidade ..> java.text.DateFormat
+bean.Oportunidade ..> java.text.ParseException
+bean.Oportunidade ..> java.text.SimpleDateFormat
+bean.Oportunidade ..> java.util.Date
+bean.Oportunidade ..> java.util.Locale
+bean.Oportunidade ..> javax.persistence.GenerationType
+bean.Oportunidade --|> java.io.Serializable
+bean.Tarefa ..> java.lang.Override
+bean.Tarefa ..> javax.persistence.Column
+bean.Tarefa ..> javax.persistence.Entity
+bean.Tarefa ..> javax.persistence.GeneratedValue
+bean.Tarefa ..> javax.persistence.Id
+bean.Tarefa ..> javax.persistence.Table
+bean.Tarefa ..> java.text.DateFormat
+bean.Tarefa ..> java.text.ParseException
+bean.Tarefa ..> java.text.SimpleDateFormat
+bean.Tarefa ..> java.util.Date
+bean.Tarefa ..> java.util.Locale
+bean.Tarefa ..> javax.persistence.GenerationType
+bean.Tarefa --|> java.io.Serializable
+bean.Usuario ..> java.lang.Override
+bean.Usuario ..> javax.persistence.Column
+bean.Usuario ..> javax.persistence.Entity
+bean.Usuario ..> javax.persistence.Id
+bean.Usuario ..> javax.persistence.Table
+bean.Usuario ..> java.util.List
+bean.Usuario --|> java.io.Serializable
+bean.Venda ..> javax.persistence.Entity
+bean.Venda ..> javax.persistence.GeneratedValue
+bean.Venda ..> javax.persistence.Id
+bean.Venda ..> javax.persistence.Table
+bean.Venda ..> javax.persistence.GenerationType
+bean.Venda --|> java.io.Serializable
+dao.AnotacaoDao ..> bean.Anotacao
+dao.AnotacaoDao ..> java.util.ArrayList
+dao.AnotacaoDao ..> java.util.List
+dao.AnotacaoDao ..> javax.persistence.EntityManager
+dao.AnotacaoDao ..> javax.persistence.EntityManagerFactory
+dao.AnotacaoDao ..> javax.persistence.Persistence
+dao.AnotacaoDao ..> org.hibernate.Query
+dao.AnotacaoDao ..> org.hibernate.Session
+dao.AnotacaoDao ..> org.hibernate.Transaction
+dao.AnotacaoDao ..> org.hibernate.cfg.Configuration
+dao.AtividadeDao ..> bean.Atividade
+dao.AtividadeDao ..> java.util.List
+dao.AtividadeDao ..> org.hibernate.Query
+dao.AtividadeDao ..> org.hibernate.Session
+dao.CampanhaDao ..> bean.Campanha
+dao.CampanhaDao ..> java.util.List
+dao.CampanhaDao ..> org.hibernate.Query
+dao.CampanhaDao ..> org.hibernate.Session
+dao.ContaDao ..> bean.Conta
+dao.ContaDao ..> java.util.List
+dao.ContaDao ..> org.hibernate.Query
+dao.ContaDao ..> org.hibernate.Session
+dao.HibernateUtil ..> org.hibernate.Session
+dao.HibernateUtil ..> org.hibernate.SessionFactory
+dao.HibernateUtil ..> org.hibernate.cfg.AnnotationConfiguration
+dao.LoginDao ..> bean.Usuario
+dao.LoginDao ..> java.util.List
+dao.LoginDao ..> org.hibernate.Query
+dao.LoginDao ..> org.hibernate.Session
+dao.OportunidadeDao ..> bean.Oportunidade
+dao.OportunidadeDao ..> java.util.List
+dao.OportunidadeDao ..> org.hibernate.Query
+dao.OportunidadeDao ..> org.hibernate.Session
+dao.TarefaDao ..> bean.Tarefa
+dao.TarefaDao ..> java.util.List
+dao.TarefaDao ..> org.hibernate.Query
+dao.TarefaDao ..> org.hibernate.Session
+dao.UsuarioDao ..> bean.Usuario
+dao.UsuarioDao ..> java.util.List
+dao.UsuarioDao ..> org.hibernate.Query
+dao.UsuarioDao ..> org.hibernate.Session
+dao.VendaDao ..> bean.Venda
+dao.VendaDao ..> java.util.List
+dao.VendaDao ..> org.hibernate.Query
+dao.VendaDao ..> org.hibernate.Session
+@enduml

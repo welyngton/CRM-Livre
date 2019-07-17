@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="bean.Usuario" table="usuario">  
+    <id name="id">
+        <generator class="increment"></generator>
+    </id>   
+    <property name="login"></property>  
+    <property name="senha"></property>  
+    <property name="endereco"></property>  
+    <property name="telefone"></property> 
+    <property name="cpf"></property> 
+    <property name="tipo"></property> 
+    <property name="nome"></property> 
+    <bag name="atividades" inverse="true" cascade="all">
+      <key column="idUsuario"/>
+      <one-to-many class="bean.Atividade"/>
+    </bag>    
+ </class>  
+</hibernate-mapping>

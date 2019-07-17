@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nãotebuk</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="icon" href="images/favicon.png" type="image/png"/>
+<link href='http://fonts.googleapis.com/css?family=Belgrano' rel='stylesheet' type='text/css'/>
+<!-- jQuery file -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tabify.js" type="text/javascript" charset="utf-8"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"/>
+<link href="js/jquery-ui-1.10.4.custom/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+var $ = jQuery.noConflict();
+$(function() {
+$('#tabsmenu').tabify();
+$(".toggle_container").hide(); 
+$(".trigger").click(function(){
+	$(this).toggleClass("active").next().slideToggle("slow");
+	return false;
+});
+});
+$(function() {
+$( "#nascimentoCliente" ).datepicker();
+});
+</script>
+</head>
+<body>
+<div id="panelwrap">
+  	
+	<div class="header">
+    <div class="title"><a href="#">Nãotebuk</a></div>
+    
+    <div class="header_right">Usuáio Admin, <a href="#" class="settings">Configurações</a>
+        <a href="#" class="logout">Sair</a> </div>    
+    <div class="menu">
+    <ul>
+    <li><a href="index.html">Início</a></li>
+    <li><a href="consertos.html">Consertos</a></li>
+    <li><a href="clientes.html" >Clientes</a></li>
+    <li><a href="#" class="selected">Usuários</a></li>
+    <li><a href="ajuda.html">Ajuda</a></li>
+    </ul>
+    </div>    
+    </div>          
+                    
+    <div class="center_content">  
+ 
+    <div id="right_wrap">
+    <div id="right_content">             
+    
+    <ul id="tabsmenu" class="tabsmenu">
+        <li class="active"><a href="#tab1">Cadastro</a></li>
+        <li><a href="#tab2">Pesquisa</a></li>
+    </ul>
+    <div id="tab1" class="tabcontent">
+        <h3>Cadastro</h3>
+        <div class="form">
+            
+            <div class="form_row">
+            <label>Nome:</label>
+            <input type="text" class="form_input" name="" />
+            </div>
+            
+            <div class="form_row">
+            <label>CPF:</label>
+            <input type="text" class="form_input" name="" />
+            </div>
+            
+            <div class="form_row">
+            <label>Usuario:</label>
+            <input type="text" class="form_input" name="" />
+            </div>
+            
+            <div class="form_row">
+            <label>senha:</label>
+            <input type="password" class="form_input" name="" />
+            </div>
+             
+            <div class="form_row">
+            <label>Nascimento</label>
+            <input type="text" class="form_input" name="" id="nascimentoCliente" />
+            </div>
+            
+            <div class="form_row">
+            <label>Sexo:</label>
+            <input type="radio" class="" name="sexo" /> 
+            <span class="radio_text">Masculino</span><br/>      
+            <input type="radio" class="" name="sexo" />
+            <span class="radio_text">Feminino</span>
+            </div>
+            
+            <div class="form_row">
+            <label>Endereço:</label>
+            <input type="text" class="form_input" name="" />
+            </div>
+            
+            <div class="form_row">
+            <label>E-mail:</label>
+            <input type="text" class="form_input" name="" />
+            </div>                   
+            
+             <div class="form_row">
+            <label>Anotações:</label>
+            <textarea class="form_textarea" name=""></textarea>
+            </div>
+            <div class="form_row">
+            <input type="submit" class="form_submit" value="Salvar" />
+            </div> 
+            <div class="clear"></div>
+        </div>
+    </div>
+        
+        <div id="tab2" class="tabcontent">
+        <h3>Pesquisa</h3>
+        <div class="form">
+            
+            <div class="form_row">
+            <label>Nome:</label>
+            <input type="text" class="form_input" name="" />
+            </div>
+            
+            <div class="form_row">
+            <label>CPF:</label>
+            <input type="text" class="form_input" name="" />
+            </div>                         
+
+            <div class="form_row">
+            <input type="submit" class="form_submit" value="Pesquisar" />
+            </div> 
+            <div class="clear"></div>
+        </div>
+                     <div class="clear" style="margin-bottom:20px;"></div>  
+                     
+<table id="rounded-corner">
+    <thead>
+    	<tr>
+        	<th></th>
+            <th>CPF</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Data Cadastro</th>
+            <th>Endereço</th>
+            <th>Sexo</th>
+            <th>Editar</th>
+            <th>Apagar</th>
+        </tr>
+    </thead>
+        <tfoot>
+    	<tr>
+        	<td colspan="12">Rodapé da tela de clientes, ver se precisa...</td>
+        </tr>
+    </tfoot>
+    <tbody>
+    	<tr class="odd">
+        	<td><input type="checkbox" name="" /></td>
+            <td>055.454.687-99</td>
+            <td>Razer Montano</td>
+            <td>razer@ufpr.br</td>
+            <td>05/02/2010</td>
+            <td>Masc</td>
+            <td>Rua dos alfeneiros, 53</td>
+            <td><a href="#"><img src="images/edit.png" alt="" title="" border="0" /></a></td>
+            <td><a href="#"><img src="images/trash.gif" alt="" title="" border="0" /></a></td>
+        </tr>        
+    </tbody>
+</table>
+        
+        </div>
+    
+
+    
+        <div class="toogle_wrap">
+            <div class="trigger"><a href="#">cadastro de clientes</a></div>
+        </div>
+      
+     </div>
+     </div><!-- end of right content-->
+                     
+                    
+    <div class="sidebar" id="sidebar">
+        
+    <h2>Atalhos</h2>
+    
+        <ul>
+            <li><a href="#">Consertos</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="#">Formulários</a></li>
+        </ul> 
+        
+    <h2>Opções de Usuário</h2>
+    
+        <ul>
+            <li><a href="#">Editar usuário</a></li>
+            <li><a href="#">Novo usuário</a></li>
+        </ul>   
+         
+    <h2>Promoção do dia!</h2> 
+    <div class="sidebar_section_text">
+        Comprando Windows 8.1 o cliente ganha limpeza do notebook!
+    </div>
+    
+    </div>             
+    
+    
+    <div class="clear"></div>
+    </div> <!--end of center_content-->
+    
+    <div class="footer">
+Trabalho da disciplina Des. Web II - Prof. Razer</div>
+
+</div>
+
+    	
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="tab3" class="tabcontent">
+        <h3>Cadastro</h3>
+        <form class="form" action="AnotacaoServlet" method="POST">           
+            
+            <div class="form_row">
+            <label>Assunto:</label>
+            <input type="text" class="form_input" name="assunto" id="assunto" required />
+            </div>                                     
+            
+            <div class="form_row">
+            <label>Descrição:</label>
+            <textarea class="form_textarea" name="descricao" id="descricao"></textarea>
+            </div>  
+            
+            <div class="form_row">
+            <label>Data Cadastro:</label>
+            <input type="text" class="form_input" name="dataCadastro" id="dataCadastro" disabled="true" />
+            </div> 
+  
+            <div class="form_row">
+            <label>Criador: </label>
+            <input type="text" class="form_input" name="criador" id="criador" />
+            </div>              
+              
+            <div class="form_row">
+                <input type="submit" class="form_submit" name="salvarAnotacao" value="Salvar" />
+            </div>           
+        </form>
+        <div class="clear"></div>
+    </div>
+    </body>
+</html>

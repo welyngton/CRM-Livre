@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="bean.Atividade" table="atividade">  
+ <id name="id">  
+ <generator class="increment"></generator>  
+ </id>  
+ <property name="assunto"></property>  
+ <property name="descricao"></property>  
+ <property name="dataCadastro"></property>  
+ <property name="dataAtividade"></property>  
+ <property name="tipo"></property>  
+ <many-to-one column="idUsuario" index="id" name="usuario" />
+ </class>  
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="bean.Conta" table="conta">  
+ <id name="id">  
+ <generator class="increment"></generator>  
+ </id>  
+ <property name="nome"></property>  
+ <property name="tipoDocumento"></property>  
+ <property name="documento"></property>  
+ <property name="telefone"></property>  
+ <property name="email"></property>  
+ <property name="endereco"></property>  
+ <property name="dataCadastro"></property>  
+ <property name="anotacoes"></property>  
+ </class>  
+</hibernate-mapping>
